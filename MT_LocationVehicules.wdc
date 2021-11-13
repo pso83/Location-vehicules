@@ -1,0 +1,228 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MT_LocationVehicules
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x10dc7f350193d8b9
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MT_LocationVehicules est une Classe <mapping=T_LocationVehicules><§rad:1§>
+      <§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	privee
+      	<MAPPING>
+      	m_nIDT_LocationVehicules	est un entier sur 8 octets	<mapping=IDT_LocationVehicules, clé unique><§rad:1§>
+      	m_dDate						est une date				<mapping=Date><§rad:1§>
+      	m_nKm_Depart				est un entier				<mapping=Km_Depart><§rad:1§>
+      	m_nKm_Arrivee				est un entier				<mapping=Km_Arrivee><§rad:1§>
+      	m_nIDT_Vehicules			est un entier sur 8 octets	<mapping=IDT_Vehicules><§rad:1§>
+      	m_nIDT_Clients				est un entier sur 8 octets	<mapping=IDT_Clients><§rad:1§>
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1214985865119717576
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()<§rad:1§>
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1214985865119783112
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : Charge
+     procedure_id : 1214987149318645015
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] Charge (<nPVehicule> est entier sur 8 octets)
+      //
+      // Paramètres :
+      //	nPVehicule (entier sur 8 octets) : <indiquez ici le rôle de nPVehicule>
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE Charge(nPVehicule est un entier sur 8 octets):booléen
+      bTrouve est un booléen = Vrai
+      
+      HLitRecherchePremier(T_LocationVehicules,IDT_LocationVehicules,nPVehicule)
+      SI HTrouve(T_LocationVehicules) ALORS
+      	FichierVersMémoire(objet,T_LocationVehicules)
+      SINON
+      	bTrouve = Faux
+      FIN
+      
+      RENVOYER bTrouve
+      
+      
+      
+     type : 458752
+   -
+     name : Sauve
+     procedure_id : 1214987179383489451
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Sauve ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE Sauve()
+      SI :m_nIDT_LocationVehicules = 0 OU :m_nIDT_LocationVehicules = "" OU :m_nIDT_LocationVehicules = Null ALORS
+      	HRAZ(T_LocationVehicules)
+      	MémoireVersFichier(objet,T_LocationVehicules)
+      SINON
+      	HLitRecherchePremier(T_LocationVehicules,IDT_LocationVehicules,m_nIDT_LocationVehicules)
+      	SI HTrouve(T_LocationVehicules) ALORS
+      		MémoireVersFichier(objet,T_LocationVehicules)
+      	FIN
+      FIN
+      
+      HEnregistre(T_LocationVehicules)
+      HRAZ(T_LocationVehicules)
+      
+      
+     type : 458752
+  properties :
+   -
+     name : p_dDate
+     identifier : 0x10dc7f9d01bf6ef9
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_dDate() : date
+         
+         RENVOYER m_dDate
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_dDate(dValeur est une date)
+         
+         m_dDate=dValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nIDT_Clients
+     identifier : 0x10dc7fc901c218c5
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_Clients() : entier sur 8 octets
+         
+         RENVOYER m_nIDT_Clients
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_Clients(nValeur est un entier sur 8 octets)
+         
+         m_nIDT_Clients=nValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nIDT_LocationVehicules
+     identifier : 0x10dc7fd101c3367f
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_LocationVehicules() : entier sur 8 octets
+         
+         RENVOYER m_nIDT_LocationVehicules
+        type : 1966080
+     template_refs : []
+   -
+     name : p_nIDT_Vehicules
+     identifier : 0x10dc7fd401c44554
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_Vehicules() : entier sur 8 octets
+         
+         RENVOYER m_nIDT_Vehicules
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_Vehicules(nValeur est un entier sur 8 octets)
+         
+         m_nIDT_Vehicules=nValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nKm_Arrivee
+     identifier : 0x10dc7fd801c552e0
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKm_Arrivee() : entier
+         
+         RENVOYER m_nKm_Arrivee
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKm_Arrivee(nValeur est un entier)
+         
+         m_nKm_Arrivee=nValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nKm_Depart
+     identifier : 0x10dc7fdb01c6601f
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKm_Depart() : entier
+         
+         RENVOYER m_nKm_Depart
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKm_Depart(nValeur est un entier)
+         
+         m_nKm_Depart=nValeur
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x181202850006c2e1
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,237 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : Cutilitaires
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x10dc741d0077821e
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      Cutilitaires est une Classe
+      herite de CVehicule
+      prive
+      	m_nVolume est un entier
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1214973667393962526
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1214973667394028062
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : TypeDuVehicule
+     procedure_id : 1214978778415606289
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // TypeDuVehicule ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE TypeDuVehicule()
+      :p_sTypeVehicule = "UTILITAIRE"
+     type : 458752
+   -
+     name : Charge
+     procedure_id : 1215033152742282588
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Charge ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE VIRTUELLE Charge(nPIDT_Utilitaire est un entier sur 8 octets):booléen
+      bTrouve est un booléen = Vrai
+      
+      HLitRecherchePremier(T_Vehicules,IDT_Vehicules,nPIDT_Utilitaire)
+      SI HTrouve(T_Vehicules) ALORS
+      	// Données de la classe CMoto
+      	m_nVolume = T_Vehicules.Volume
+      	
+      	// Données de la classe CVehicules
+      	:p_sCouleur = T_Vehicules.Couleur
+      	:p_nKilometrage = T_Vehicules.Kilometrage
+      	:p_sMarque = T_Vehicules.Marque
+      	:p_sModel = T_Vehicules.Modele
+      	:p_sTransmission = T_Vehicules.Transmission
+      	:p_sEnergie = T_Vehicules.Energie
+      	:p_sTypeVehicule = T_Vehicules.TypeVehicule
+      	:p_sNumeroMoteur = T_Vehicules.NumeroMoteur
+      	:p_sNumeroImmatriculation = T_Vehicules.Immatriculation
+      	:p_nIDVehicule = T_Vehicules.IDT_Vehicules
+      	:p_bEstDispo = T_Vehicules.EstDispo
+      FIN
+      
+      HFerme(T_Vehicules)
+      
+      RENVOYER bTrouve
+      
+      
+      
+     type : 458752
+   -
+     name : FicheVehicule
+     procedure_id : 1215034020325813125
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] FicheVehicule ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	chaîne ANSI : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE FicheVehicule():chaine
+      sDispo est une chaîne
+      SI p_bEstDispo ALORS
+      	sDispo = "DISPONIBLE"
+      SINON
+      	sDispo = "INDISPONIBLE"
+      FIN
+      
+      sMafiche est une chaine = [
+      	Marque : [%p_sMarque%]
+      	Modèle : [%p_sModel%]
+      	Énergie : [%p_sEnergie%]
+      	Numéro d'immatriculation : [%p_sNumeroImmatriculation%]
+      	Transmission : [%p_sTransmission%]
+      	Volume : [%p_nVolume%] m3
+      	Couleur : [%p_sCouleur%]
+      	Kilométrage : [%p_nKilometrage%] km
+      	Disponibilité : [%sDispo%]
+      ]
+      
+      RENVOYER sMafiche
+      
+      
+      
+     type : 458752
+   -
+     name : Sauve
+     procedure_id : 1215249305521013665
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Sauve ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE VIRTUELLE Sauve():booléen
+      bSucces est un booléen = Vrai
+      
+      SI :p_nIDVehicule = 0 _OU_ :p_nIDVehicule = "" _OU_ :p_nIDVehicule = Null ALORS
+      	HRAZ(T_Vehicules)
+      	:TypeDuVehicule()
+      SINON
+      	HLitRecherchePremier(T_Vehicules,IDT_Vehicules,:p_nIDVehicule)
+      	SI HTrouve(T_Vehicules) = Faux ALORS
+      		bSucces = Faux
+      	FIN
+      FIN
+      
+      SI bSucces = Vrai ALORS
+      	// Spécificité utilitaires
+      	T_Vehicules.Volume			= :m_nVolume
+      	
+      	// Commun à tous les véhicules
+      	T_Vehicules.Couleur			= :p_sCouleur
+      	T_Vehicules.Kilometrage		= :p_nKilometrage
+      	T_Vehicules.Immatriculation	= :p_sNumeroImmatriculation
+      	T_Vehicules.Marque			= :p_sMarque
+      	T_Vehicules.Modele			= :p_sModel
+      	T_Vehicules.Energie 		= :p_sEnergie
+      	T_Vehicules.Transmission 	= :p_sTransmission
+      	T_Vehicules.NumeroMoteur	= :p_sNumeroMoteur
+      	T_Vehicules.TypeVehicule	= :p_sTypeVehicule
+      	T_Vehicules.EstDispo		= :p_bEstDispo
+      	
+      	bSucces						= HEnregistre(T_Vehicules)
+      	
+      FIN
+      
+      SI bSucces _ET_ :p_nIDVehicule = 0 _OU_ :p_nIDVehicule = "" _OU_ :p_nIDVehicule = Null ALORS
+      	:p_nIDVehicule = T_Vehicules.IDT_Vehicules
+      FIN
+      
+      HFerme(T_Vehicules)
+      RENVOYER bSucces
+      
+      
+      
+     type : 458752
+  properties :
+   -
+     name : p_nVolume
+     identifier : 0x10dc7456007a6133
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nVolume() : entier
+         
+         RENVOYER m_nVolume
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nVolume(nValeur est un entier)
+         
+         m_nVolume=nValeur
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x10dc741700716b3a
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

@@ -1,0 +1,2 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+T_Vehicules	Poids	CNW	Réel sur 4 octets$Entier sur 4 octets	la rubrique Poids a pour nouveau type Réel sur 4 octets

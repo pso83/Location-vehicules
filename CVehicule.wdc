@@ -1,0 +1,339 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CVehicule
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x10d9e5e3000a4029
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CVehicule est une Classe, abstraite
+      
+      privee
+      	m_nIDVehicule est un entier sur 8 octets
+      	m_sNumeroMoteur est une chaine
+      	m_sNumeroImmatriculation est une chaîne
+      	m_sTransmission est une chaine
+      	m_sMarque est une chaîne
+      	m_sModel est une chaîne
+      	m_sEnergie est une chaine
+      	m_nKilometrage est un entier
+      	m_sCouleur est une chaine
+      	m_sTypeVehicule est une chaine
+      	m_bEstDispo est un booléen
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1214254337674133545
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1214254337674199081
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : TypeDuVehicule
+     procedure_id : 1214974925825374308
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] TypeDuVehicule ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE ABSTRAITE TypeDuVehicule()
+      
+     type : 458752
+   -
+     name : Sauve
+     procedure_id : 1215077936323031184
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] Sauve ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE ABSTRAITE Sauve():booléen
+      
+     type : 458752
+   -
+     name : Charge
+     procedure_id : 1215078005042916948
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] Charge (<nPIDT_> est entier sur 8 octets)
+      //
+      // Paramètres :
+      //	nPIDT_ (entier sur 8 octets) : <indiquez ici le rôle de nPIDT_>
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE ABSTRAITE Charge(nPIDT_ est un entier sur 8 octets):booléen
+      
+     type : 458752
+   -
+     name : FicheVehicule
+     procedure_id : 1264729815617338150
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // FicheVehicule ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE ABSTRAITE FicheVehicule():chaîne
+      
+     type : 458752
+  properties :
+   -
+     name : p_sMarque
+     identifier : 0x10d9e771000d52e9
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sMarque() : chaîne
+         
+         RENVOYER m_sMarque
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sMarque(sValeur est une chaîne)
+         
+         m_sMarque=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sModel
+     identifier : 0x10d9e776000e66a0
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sModel() : chaîne
+         
+         RENVOYER m_sModel
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sModel(sValeur est une chaîne)
+         
+         m_sModel=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sNumeroImmatriculation
+     identifier : 0x10d9e77b000f799b
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNumeroImmatriculation() : chaîne
+         
+         RENVOYER m_sNumeroImmatriculation
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNumeroImmatriculation(sValeur est une chaîne)
+         
+         m_sNumeroImmatriculation=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sNumeroMoteur
+     identifier : 0x10d9e78000108c29
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNumeroMoteur() : chaîne
+         
+         RENVOYER m_sNumeroMoteur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNumeroMoteur(sValeur est une chaîne)
+         
+         m_sNumeroMoteur=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sTypeVehicule
+     identifier : 0x10dc74ca00c625a7
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sTypeVehicule() : chaîne
+         
+         RENVOYER m_sTypeVehicule
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE protegee p_sTypeVehicule(sValeur est une chaîne)
+         
+         m_sTypeVehicule=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nKilometrage
+     identifier : 0x10dc7edd017c7e49
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKilometrage() : entier
+         
+         RENVOYER m_nKilometrage
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nKilometrage(nValeur est un entier)
+         
+         m_nKilometrage=nValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_nIDVehicule
+     identifier : 0x10dc88c1030323a8
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDVehicule() : entier sur 8 octets
+         
+         RENVOYER m_nIDVehicule
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDVehicule(nValeur est un entier sur 8 octets)
+         
+         m_nIDVehicule=nValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sCouleur
+     identifier : 0x10dcac4e0094003e
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sCouleur() : chaîne
+         
+         RENVOYER m_sCouleur
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sCouleur(sValeur est une chaîne)
+         
+         m_sCouleur=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_bEstDispo
+     identifier : 0x118d69d901b40980
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_bEstDispo() : booléen
+         
+         RENVOYER m_bEstDispo
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_bEstDispo(bValeur est un booléen)
+         
+         m_bEstDispo=bValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sEnergie
+     identifier : 0x118f86e801a58dcd
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sEnergie() : chaîne
+         
+         RENVOYER m_sEnergie
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sEnergie(sValeur est une chaîne)
+         
+         m_sEnergie=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sTransmission
+     identifier : 0x118f8c4602a98328
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sTransmission() : chaîne
+         
+         RENVOYER m_sTransmission
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sTransmission(sValeur est une chaîne)
+         
+         m_sTransmission=sValeur
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x10d9e5c90004db35
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

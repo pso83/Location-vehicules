@@ -1,0 +1,244 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MT_Clients
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x10dc7f3c01a8f0d4
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MT_Clients est une Classe <mapping=T_Clients><§rad:1§>
+      <§rad:1§>
+      	// Le code se trouvant entre <MAPPING> et <FIN> est généré automatiquement.<§rad:1§>
+      	// Il sera effacé et recréé entièrement à chaque génération depuis le menu contextuel<§rad:1§>
+      	// du fichier dans l'explorateur de projet "..Regénérer la classe modèle".<§rad:1§>
+      	privee
+      	<MAPPING>
+      	m_nIDT_Clients	est un entier sur 8 octets	<mapping=IDT_Clients, clé unique><§rad:1§>
+      	m_sNom			est une chaîne ANSI			<mapping=Nom><§rad:1§>
+      	m_sPrenom		est une chaîne ANSI			<mapping=Prenom><§rad:1§>
+      	m_sVille		est une chaîne ANSI			<mapping=Ville><§rad:1§>
+      	m_sCodePostal	est une chaîne ANSI			<mapping=CodePostal><§rad:1§>
+      	m_sPrenomNom	est une chaîne ANSI			<mapping=PrenomNom><§rad:1§>
+      	m_sNomPrenom	est une chaîne ANSI			<mapping=NomPrenom><§rad:1§>
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1214985895185871060
+     type_code : 27
+     code : |1-
+      PROCEDURE Constructeur()<§rad:1§>
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1214985895185936596
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()<§rad:1§>
+     type : 655360
+   -
+     name : Charge
+     procedure_id : 1214987248103440751
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] Charge (<nPClient> est entier sur 8 octets)
+      //
+      // Paramètres :
+      //	nPClient (entier sur 8 octets) : <indiquez ici le rôle de nPClient>
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE Charge(nPClient est un entier sur 8 octets):booléen
+      bTrouve est un booléen = Vrai
+      
+      HLitRecherchePremier(T_Clients,IDT_Clients,nPClient)
+      si HTrouve(T_Clients) ALORS
+      	FichierVersMémoire(Objet,T_Clients)
+      sinon
+      	bTrouve = faux
+      FIN
+      
+      renvoyer bTrouve
+      
+     type : 458752
+   -
+     name : Sauve
+     procedure_id : 1214987282463252015
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Sauve ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE Sauve()
+      si :m_nIDT_Clients = 0 ou :m_nIDT_Clients = "" ou :m_nIDT_Clients = null ALORS
+      	hraz(T_Clients)
+      	MémoireVersFichier(Objet,T_Clients)
+      sinon
+      	HLitRecherchePremier(T_Clients,IDT_Clients,m_nIDT_Clients)
+      	si HTrouve(T_Clients) ALORS
+      		MémoireVersFichier(objet,T_Clients)
+      	FIN
+      FIN
+      
+      HEnregistre(T_Clients)
+      HRAZ(T_Clients)
+      
+     type : 458752
+  properties :
+   -
+     name : p_nIDT_Clients
+     identifier : 0x10dc7f6e01b8b57c
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_nIDT_Clients() : entier sur 8 octets
+         
+         RENVOYER m_nIDT_Clients
+        type : 1966080
+     template_refs : []
+   -
+     name : p_sCodePostal
+     identifier : 0x10dc7f7201b9c5f7
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sCodePostal() : chaîne
+         
+         RENVOYER m_sCodePostal
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sCodePostal(sValeur est une chaîne)
+         
+         m_sCodePostal=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sNom
+     identifier : 0x10dc7f7601bad3c2
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNom() : chaîne
+         
+         RENVOYER m_sNom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNom(sValeur est une chaîne)
+         
+         m_sNom=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sNomPrenom
+     identifier : 0x10dc7f7a01bbe333
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNomPrenom() : chaîne
+         
+         RENVOYER m_sNomPrenom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sNomPrenom(sValeur est une chaîne)
+         
+         m_sNomPrenom=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sPrenom
+     identifier : 0x10dc7f7e01bcf285
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sPrenom() : chaîne
+         
+         RENVOYER m_sPrenom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sPrenom(sValeur est une chaîne)
+         
+         m_sPrenom=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sPrenomNom
+     identifier : 0x10dc7f8101bd008f
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sPrenomNom() : chaîne
+         
+         RENVOYER m_sPrenomNom
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sPrenomNom(sValeur est une chaîne)
+         
+         m_sPrenomNom=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_sVille
+     identifier : 0x10dc7f8501be0ed7
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sVille() : chaîne
+         
+         RENVOYER m_sVille
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_sVille(sValeur est une chaîne)
+         
+         m_sVille=sValeur
+        type : 2031616
+     template_refs : []
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x10dc7f3c01b1f0e4
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

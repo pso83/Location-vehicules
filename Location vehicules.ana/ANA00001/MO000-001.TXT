@@ -1,0 +1,6 @@
+//MO000-001.TXT ANA00000 TO ANA00001
+T_Vehicules		NFI		nouveau fichier
+T_Clients		NFI		nouveau fichier
+T_LocationVehicules		NFI		nouveau fichier
+Contrainte_T_LocationVehicules_T_Vehicules		NWL	T_Vehicules (IDT_Vehicules) et T_LocationVehicules (IDT_Vehicules)	Nouvelle liaison entre les fichiers T_Vehicules (IDT_Vehicules) et T_LocationVehicules (IDT_Vehicules)
+Contrainte_T_LocationVehicules_T_Clients		NWL	T_Clients (IDT_Clients) et T_LocationVehicules (IDT_Clients)	Nouvelle liaison entre les fichiers T_Clients (IDT_Clients) et T_LocationVehicules (IDT_Clients)

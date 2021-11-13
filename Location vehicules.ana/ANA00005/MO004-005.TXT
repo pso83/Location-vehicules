@@ -1,0 +1,3 @@
+//MO004-005.TXT ANA00004 TO ANA00005
+T_Vehicules		TAR	449	nouvelle taille enregistrement : 449
+T_Vehicules	Transmission	RUB+		Transmission est une nouvelle clé
