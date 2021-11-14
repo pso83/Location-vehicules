@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CT_ContratsLocation
+ major_version : 25
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1191286c03a37a29
+ internal_properties : BQAAAAUAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CT_ContratsLocation est une Classe
+      		IDT_ContratsLocation est un entier sur 8 octets = 0 //Identifiant de T_ContratsLocation
+      		Nom est une chaîne = "" //Nom
+      		Date est une date //Date
+      		NumeroContrat est une chaîne = "" //NumeroContrat
+      		ContratPDF est un buffer //ContratPDF
+      		NomAgence est une chaîne = "" //NomAgence
+      		NomCommercial est une chaîne = "" //NomCommercial
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1265837414650575401
+     type_code : 27
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      // Constructeur ()
+      //
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      
+      
+      
+      PROCEDURE Constructeur( )
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1265837414650640937
+     type_code : 28
+     code : |1-
+      
+      
+      PROCEDURE Destructeur()
+     type : 655360
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BQAAAAUAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+resources :
+ string_res :
+  identifier : 0x1191286c03a47a29
+  internal_properties : BQAAAAUAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+custom_note :
+ internal_properties : BQAAAAUAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

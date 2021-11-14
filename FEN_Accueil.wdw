@@ -22,7 +22,7 @@ window :
      p_codes :
       -
         code : |1+
-         ouvre(FEN_Vehicule)
+         ouvre(FEN_Nouveau_Vehicule)
         type : 18
       -
         type : 161

@@ -97,6 +97,7 @@ class :
       	:p_sNumeroImmatriculation = T_Vehicules.Immatriculation
       	:p_nIDVehicule = T_Vehicules.IDT_Vehicules
       	:p_bEstDispo = T_Vehicules.EstDispo
+      	:p_Photo = T_Vehicules.Photo
       sinon 
       	bTrouve = Faux
       FIN
@@ -199,6 +200,7 @@ class :
       	T_Vehicules.NumeroMoteur 		= :p_sNumeroMoteur
       	T_Vehicules.TypeVehicule 		= :p_sTypeVehicule
       	T_Vehicules.EstDispo			= :p_bEstDispo
+      	T_Vehicules.Photo 				= :p_Photo
       	
       	bSucces = HEnregistre(T_Vehicules)
       	

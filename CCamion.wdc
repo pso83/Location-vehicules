@@ -14,12 +14,13 @@ class :
   type_code : 10
   p_codes :
    -
-     code : |1+
+     code : |1-
       CCamion est une Classe
-      herite de CVehicule
+      		Hérite de CVehicule
       privee
-      	m_nPoids est un entier
+      		m_nPoids est un entier = 0
       FIN
+       
      type : 131072
   procedures :
    -
@@ -27,8 +28,7 @@ class :
      procedure_id : 1214261402897897735
      type_code : 27
      code : |1+
-      PROCEDURE Constructeur()
-      
+      PROCEDURE Constructeur( )
      type : 589824
    -
      name : Destructeur
@@ -45,7 +45,7 @@ class :
      code : |1+
       // Résumé : <indiquez ici ce que fait la procédure>
       // Syntaxe :
-      // TypeDuVehicule ()
+      //TypeDuVehicule ()
       //
       // Paramètres :
       //	Aucun
@@ -55,7 +55,7 @@ class :
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE TypeDuVehicule()
+      PROCEDURE VIRTUELLE TypeDuVehicule()
       
      type : 458752
    -
@@ -65,17 +65,18 @@ class :
      code : |1+
       // Résumé : <indiquez ici ce que fait la procédure>
       // Syntaxe :
-      // Charge ()
+      //[ <Résultat> = ] Charge (<nPIDT_Camion> est entier sur 8 octets)
       //
       // Paramètres :
-      //	Aucun
+      //	nPIDT_Camion (entier sur 8 octets) : <indiquez ici le rôle de nPIDT_Camion>
       // Valeur de retour :
-      // 	Aucune
+      // 	booléen : // 	Aucune
       //
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE VIRTUELLE Charge(nPIDT_Camion est un entier sur 8 octets):booléen
+      FONCTION VIRTUELLE Charge(nPIDT_Camion est un entier sur 8 octets)
+      
       bTrouve est un booléen = Vrai
       
       HLitRecherchePremier(T_Vehicules,IDT_Vehicules,nPIDT_Camion)
@@ -95,6 +96,7 @@ class :
       	:p_sNumeroImmatriculation = T_Vehicules.Immatriculation
       	:p_nIDVehicule = T_Vehicules.IDT_Vehicules
       	:p_bEstDispo = T_Vehicules.EstDispo
+      	:p_Photo = T_Vehicules.Photo
       FIN
       
       HFerme(T_Vehicules)
@@ -121,7 +123,8 @@ class :
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE FicheVehicule():chaîne
+      FONCTION VIRTUELLE FicheVehicule()
+      
       sDispo est une chaîne
       SI p_bEstDispo ALORS
       	sDispo = "DISPONIBLE"
@@ -153,17 +156,18 @@ class :
      code : |1+
       // Résumé : <indiquez ici ce que fait la procédure>
       // Syntaxe :
-      // Sauve ()
+      //[ <Résultat> = ] Sauve ()
       //
       // Paramètres :
       //	Aucun
       // Valeur de retour :
-      // 	Aucune
+      // 	booléen : // 	Aucune
       //
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE VIRTUELLE Sauve():booléen
+      FONCTION VIRTUELLE Sauve()
+      
       bSucces est un booléen = Vrai
       
       SI :p_nIDVehicule = 0 _OU_ :p_nIDVehicule = "" _OU_ :p_nIDVehicule = Null ALORS
@@ -190,6 +194,7 @@ class :
       	T_Vehicules.Energie 		= :p_sEnergie
       	T_Vehicules.NumeroMoteur	= :p_sNumeroMoteur
       	T_Vehicules.TypeVehicule	= :p_sTypeVehicule
+      	T_Vehicules.Photo 			= :p_Photo
       	
       	bSucces						= HEnregistre(T_Vehicules)
       	
@@ -211,13 +216,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nPoids() : entier
+         PROCEDURE p_nPoids ()
          
          RENVOYER m_nPoids
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nPoids(nValeur est un entier)
+         PROCEDURE p_nPoids ( nValeur est un entier )
          
          m_nPoids=nValeur
         type : 2031616

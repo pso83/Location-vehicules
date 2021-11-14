@@ -276,18 +276,22 @@ window :
          		clUneVoiture est une CVoiture
          		clUneVoiture.Charge(TABLE_REQ_Liste_Vehicules.COL_IDT_Vehicules)
          		SAI_Vehicule = clUneVoiture.FicheVehicule()
+         		IMG_Vehicule = dChargeImage(clUneVoiture.p_Photo)
          	cas "MOTO"
          		clUneMoto est une CMoto
          		clUneMoto.Charge(TABLE_REQ_Liste_Vehicules.COL_IDT_Vehicules)
          		SAI_Vehicule = clUneMoto.FicheVehicule()
+         		IMG_Vehicule = dChargeImage(clUneMoto.p_Photo)
          	cas "UTILITAIRE"
          		clUnUtilitaire est une Cutilitaires
          		clUnUtilitaire.Charge(TABLE_REQ_Liste_Vehicules.COL_IDT_Vehicules)
          		SAI_Vehicule = clUnUtilitaire.FicheVehicule()
+         		IMG_Vehicule = dChargeImage(clUnUtilitaire.p_Photo)
          	cas "CAMION"
          		clUnCamion est une CCamion
          		clUnCamion.Charge(TABLE_REQ_Liste_Vehicules.COL_IDT_Vehicules)
          		SAI_Vehicule = clUnCamion.FicheVehicule()
+         		IMG_Vehicule = dChargeImage(clUnCamion.p_Photo)
          	AUTRE CAS
          		
          FIN
@@ -323,15 +327,36 @@ window :
      type_code : 8
      p_codes : []
   -
-    name : BTN_Ajout_Photo
-    identifier : 0x218f93e9035e586d
-    internal_properties : BQAAAAUAAACQHuINCDEzUBAc3sfY8aKtY6jler+r2LsY9dVLI7a5yRFup1PhbsHzHElZjX4ZFUM5hVjWHpHoaSEnU4McmtPMs0QTuWYPRyHuezi1I/f//+s3ZK+Dg/4oypgXTmOVcEknW4KCERedorgRv0m+sj5B8wG7wX0Ure119yJl4TU9yL8jmHSSXZLhZSzMR4xT5cq5bzTJiHx9+K/sBDp+QZZ76UH7s9iP4IAesjFdboWhhkJZu62ISrVAONAWbSGDRvjLTwV7ZUf2Bpg9d+m0pVdtLI2tOYi1vqTBvxvdve4h/UfXHT5FIjbCcMj6cfX6zBnWggJap3s6QvfvB2U8uq8Ant7Ya+SoFSBd1bHLImc25CL9HvFQB28OY+GPso15LYYqiqdNke6P/BHlk7AQX8Xh35R4Yd8U35XANpaA7qbFSf5GbkK/4c0iAZSzDCBbvnnmE59KP/xFzrm8DOFP6shEcSw21zcUA9IDfQR9s226y8xyMvkhM8Ukw3m74YDEIxe60fl+/D2b/5S8DMfvupachOqGorGwct6wS9W50NcPnpOB9DvYrRPfbWZBtIck+Q5/SI4tSL8l0HCSvN8F9zQl1/9phin09BtDDCNxmsAXYYn4/O0ysbz5kdPelXeWEXw2BqCLDrDbKDqWja5zDtyUxBUl2r9vW71kHW2s5ju88pPZpcSpn2Oqv9LVJJgbaeZYLdm/Zi0xBD96SOM2OmpOiDpVoNtI4sTWU0+EPEHeEn8f42hB1GiSVYOP
+    name : BTN_Modifier_Vehicule
+    identifier : 0x21912ea4044bc45c
+    internal_properties : BQAAAAUAAAAPSQ32cwtxJP1UWInlwV7yD1Z5Cdlj4DiGjU2kBtAQPaV7hnDiMhYY+J1tr8cFwa6MwGc6PaLiXXtAl1GTHDOZB0+t7tJncKctfsxNW/q+f+bIgXdsEqtNYVEyRCFMzQ/KjB0Ht5/gm3RWCtQPLEZe49HGX1KJHRJ/DlNBtPVjaBvmw0OEkqsG9TYvuLA3P57ANuHKmE8xeEPbdVb3xI/FcnufosgWIMpFMVpDt2aSjUaMofH0DvuzjudZRDZkqSLBzFwzbYisxMwzYiMUzlmDcuMIegmEhY559sB4vKWK5qHrAT2omf9fsM0nIt/MkGyiR/OK8qve7uda/aFsr4Jlaf8ftU4i6c4sJHbSZ0Ln1xem9b22Ufyljj/qLk8aCdGFBtZu7skPqM9FqbZ78WhwSG5FN4hDRF8z901n0D4VeDkKXl5fwyhUoUm6LjXDlja1IvXhCiVNUFZNr9qKbMq1JkjIsSagwBCcf7nsuBGWUUfKW4yLTevzLxs7UkH05CvjaEfHmbgc0LPb3czoVzJh7Q1Z6eyvCubV7fPQBMX1/1lO9hIxWyBVmFqUF6OqCxvYh62gY8v+WrFb1z0q7D8ayyCpmUd6mz9iDd2y1DJWQsxcLi+roObvun4o1IX8WvfoEjUIf/c2jF3jCUh9xG1U/JmWBVAziGCjz9cDIYK/rI5Ag0AxhDEpYHoegC9M+nG0fxE3hT8WW8l4I9TjsIDJKzTl/uRLkdQgfTB4lVyKL+8g7A==
     type : 4
     code_elements :
      type_code : 4
      p_codes :
       -
+        code : |1+
+         ouvre(FEN_Modif_Vehicule,TABLE_REQ_Liste_Vehicules.COL_IDT_Vehicules,COMBO_Liste_Vehicules..ValeurAffichée)
+        type : 18
+      -
         type : 161
+        enabled : false
+  -
+    name : SAI_Lien_Photo
+    identifier : 0x21914ae801422dfc
+    internal_properties : BQAAAAUAAAAV7EOmvw47Cw9zeX0bvBhcH6Pll2pcwDI1cgOUWkMWVFhpI8MAVxb5ZtTBdpfk2xdkDjfU+U9gGdW1HZX34Nmdhclh4GQpkXrrrLwcxhZiMPipgSfLs4XXiWi8srGavtrvuUA9qNaUreH5oA3n1SxzdareLLJ2FPUYujk513Ux5os11gkvXhs6JJUApGucJnMiIR2BEVGLLesFFWADEYTbgk++A/pWIeIxM1JW9dP0aNTsM8LL5H/kRTG0SE+ioHexDP4FFiMo82J6ez+pWq5BdtWsejs+/feQhx4fI2IdXO9fYb8XGJt/JVI59PgSd0svYsj0hJGoGsmwHSlPMyV7VqkfLhtkObUH378rp8nidLlJwIiTj7a2LBLNKEO3V5smXPVvdlAHFSVogzwBykGP1vltbZd66rdYpuyZIGSvrOkQUkTG3m00n/GA0OMPlkvg+ZyAriDm4Pfl0KqWYnaopzGoPOfctY/bv7VpfF2PFWGyqyr/SuxJ8k07UOLq1zsJphk4gkPI2V+lnff5oDVMMrEmtiYS4ft7j7ddhZMxZEfWMkTUERpKP+da0PRM5eG248uxdZFM4KtvNY99o2PqifLgf52cBgcL9FlKnrWFc+2vArLUmZaQivLvGYrzYLUrCVRCDtsqfMpA1+U/P86h6Ugq39ZCKgXBdUXmXJq1RMehehVJVh8vkQvDoYu2EgJSPWDZxBfDJf0+n3MNKCuElwpnfM0x91Ld5yPzCJGf9mKpaa2f3ZGKGbm/rcsCjllgPjzEjX57SwbR2LsX0n9hvKCvUddPoDmgqmaQoJ7fyof/21Em5slBjO+zC2aLmGWQ9/MBMZb3r2TkmIzGPLsfUEDmc1acz5oYIS0/fPfPm4jvdD/JiZ0Ix2QrzOXWuZdiTQdCwtjgRcrw742RLDYjuirirZbJhjD2cIT+5k6UgE3XvQ3qfsVO0uY8sDChalJ1BN1G8oYV5+/+5loXu7NR6jVru7tDvYpxlsW33nY47NrdLS2vAaynsyyQT1Dmi6BHAsEAGL6Oqrdf
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
         enabled : false
  menu :
   name : _Menu
@@ -349,6 +374,7 @@ window :
    -
      code : |1+
       PROCEDURE MaFenêtre()
+      
    -
      code : |1+
       COMBO_Liste_Vehicules = "VOITURE"

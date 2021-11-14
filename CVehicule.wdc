@@ -14,22 +14,24 @@ class :
   type_code : 10
   p_codes :
    -
-     code : |1+
-      CVehicule est une Classe, abstraite
-      
+     code : |1-
+      CVehicule est une Classe, ABSTRAITE
+       
       privee
-      	m_nIDVehicule est un entier sur 8 octets
-      	m_sNumeroMoteur est une chaine
-      	m_sNumeroImmatriculation est une chaîne
-      	m_sTransmission est une chaine
-      	m_sMarque est une chaîne
-      	m_sModel est une chaîne
-      	m_sEnergie est une chaine
-      	m_nKilometrage est un entier
-      	m_sCouleur est une chaine
-      	m_sTypeVehicule est une chaine
-      	m_bEstDispo est un booléen
+      		m_nIDVehicule est un entier sur 8 octets = 0
+      		m_sNumeroMoteur est une chaîne = ""
+      		m_sNumeroImmatriculation est une chaîne = ""
+      		m_sTransmission est une chaîne = ""
+      		m_sMarque est une chaîne = ""
+      		m_sModel est une chaîne = ""
+      		m_sEnergie est une chaîne = ""
+      		m_nKilometrage est un entier = 0
+      		m_sCouleur est une chaîne = ""
+      		m_sTypeVehicule est une chaîne = ""
+      		m_bEstDispo est un booléen 
+      		m_Photo est une image
       FIN
+       
      type : 131072
   procedures :
    -
@@ -37,8 +39,7 @@ class :
      procedure_id : 1214254337674133545
      type_code : 27
      code : |1+
-      PROCEDURE Constructeur()
-      
+      PROCEDURE Constructeur( )
      type : 589824
    -
      name : Destructeur
@@ -65,7 +66,7 @@ class :
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE ABSTRAITE TypeDuVehicule()
+      FONCTION ABSTRAITE TypeDuVehicule()
       
      type : 458752
    -
@@ -80,12 +81,12 @@ class :
       // Paramètres :
       //	Aucun
       // Valeur de retour :
-      // 	booléen : // 	Aucune
+      // 	Type indéterminé : // 	Aucune
       //
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE ABSTRAITE Sauve():booléen
+      FONCTION ABSTRAITE Sauve()
       
      type : 458752
    -
@@ -100,12 +101,12 @@ class :
       // Paramètres :
       //	nPIDT_ (entier sur 8 octets) : <indiquez ici le rôle de nPIDT_>
       // Valeur de retour :
-      // 	booléen : // 	Aucune
+      // 	Type indéterminé : // 	Aucune
       //
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE ABSTRAITE Charge(nPIDT_ est un entier sur 8 octets):booléen
+      FONCTION ABSTRAITE Charge(nPIDT_ est un entier sur 8 octets)
       
      type : 458752
    -
@@ -115,17 +116,17 @@ class :
      code : |1+
       // Résumé : <indiquez ici ce que fait la procédure>
       // Syntaxe :
-      // FicheVehicule ()
+      //[ <Résultat> = ] FicheVehicule ()
       //
       // Paramètres :
       //	Aucun
       // Valeur de retour :
-      // 	Aucune
+      // 	Type indéterminé : // 	Aucune
       //
       // Exemple :
       // Indiquez ici un exemple d'utilisation.
       //
-      PROCEDURE ABSTRAITE FicheVehicule():chaîne
+      FONCTION ABSTRAITE FicheVehicule()
       
      type : 458752
   properties :
@@ -136,13 +137,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sMarque() : chaîne
+         PROCEDURE p_sMarque ()
          
          RENVOYER m_sMarque
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sMarque(sValeur est une chaîne)
+         PROCEDURE p_sMarque ( sValeur est une chaîne )
          
          m_sMarque=sValeur
         type : 2031616
@@ -154,13 +155,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sModel() : chaîne
+         PROCEDURE p_sModel ()
          
          RENVOYER m_sModel
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sModel(sValeur est une chaîne)
+         PROCEDURE p_sModel ( sValeur est une chaîne )
          
          m_sModel=sValeur
         type : 2031616
@@ -172,13 +173,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sNumeroImmatriculation() : chaîne
+         PROCEDURE p_sNumeroImmatriculation ()
          
          RENVOYER m_sNumeroImmatriculation
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sNumeroImmatriculation(sValeur est une chaîne)
+         PROCEDURE p_sNumeroImmatriculation ( sValeur est une chaîne )
          
          m_sNumeroImmatriculation=sValeur
         type : 2031616
@@ -190,13 +191,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sNumeroMoteur() : chaîne
+         PROCEDURE p_sNumeroMoteur ()
          
          RENVOYER m_sNumeroMoteur
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sNumeroMoteur(sValeur est une chaîne)
+         PROCEDURE p_sNumeroMoteur ( sValeur est une chaîne )
          
          m_sNumeroMoteur=sValeur
         type : 2031616
@@ -208,13 +209,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sTypeVehicule() : chaîne
+         PROCEDURE p_sTypeVehicule ()
          
          RENVOYER m_sTypeVehicule
         type : 1966080
       -
         code : |1-
-         PROCEDURE protegee p_sTypeVehicule(sValeur est une chaîne)
+         PROCEDURE PROTÉGÉE p_sTypeVehicule ( sValeur est une chaîne )
          
          m_sTypeVehicule=sValeur
         type : 2031616
@@ -226,13 +227,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nKilometrage() : entier
+         PROCEDURE p_nKilometrage ()
          
          RENVOYER m_nKilometrage
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nKilometrage(nValeur est un entier)
+         PROCEDURE p_nKilometrage ( nValeur est un entier )
          
          m_nKilometrage=nValeur
         type : 2031616
@@ -244,13 +245,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nIDVehicule() : entier sur 8 octets
+         PROCEDURE p_nIDVehicule ()
          
          RENVOYER m_nIDVehicule
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_nIDVehicule(nValeur est un entier sur 8 octets)
+         PROCEDURE p_nIDVehicule ( nValeur est un entier sur 8 octets )
          
          m_nIDVehicule=nValeur
         type : 2031616
@@ -262,13 +263,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sCouleur() : chaîne
+         PROCEDURE p_sCouleur ()
          
          RENVOYER m_sCouleur
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sCouleur(sValeur est une chaîne)
+         PROCEDURE p_sCouleur ( sValeur est une chaîne )
          
          m_sCouleur=sValeur
         type : 2031616
@@ -280,13 +281,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_bEstDispo() : booléen
+         PROCEDURE p_bEstDispo ()
          
          RENVOYER m_bEstDispo
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_bEstDispo(bValeur est un booléen)
+         PROCEDURE p_bEstDispo ( bValeur est un booléen )
          
          m_bEstDispo=bValeur
         type : 2031616
@@ -298,13 +299,13 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sEnergie() : chaîne
+         PROCEDURE p_sEnergie ()
          
          RENVOYER m_sEnergie
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sEnergie(sValeur est une chaîne)
+         PROCEDURE p_sEnergie ( sValeur est une chaîne )
          
          m_sEnergie=sValeur
         type : 2031616
@@ -316,15 +317,33 @@ class :
      p_codes :
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sTransmission() : chaîne
+         PROCEDURE p_sTransmission ()
          
          RENVOYER m_sTransmission
         type : 1966080
       -
         code : |1-
-         PROCEDURE PUBLIQUE p_sTransmission(sValeur est une chaîne)
+         PROCEDURE p_sTransmission ( sValeur est une chaîne )
          
          m_sTransmission=sValeur
+        type : 2031616
+     template_refs : []
+   -
+     name : p_Photo
+     identifier : 0x119167e0017b571a
+     type_code : 103
+     p_codes :
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Photo() : Image
+         
+         RENVOYER m_Photo
+        type : 1966080
+      -
+        code : |1-
+         PROCEDURE PUBLIQUE p_Photo(Valeur est Image)
+         
+         m_Photo=Valeur
         type : 2031616
      template_refs : []
   procedure_templates : []
