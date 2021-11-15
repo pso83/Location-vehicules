@@ -47,7 +47,7 @@ window :
   -
     name : SAI_ID
     identifier : 0x21916cbf0c585db5
-    internal_properties : BQAAAAUAAAAmeIikJ9+pPn6GDEW6+PYVio6nq72CcK+5As/ZpDGMoZp94fH0l++wUdA3azmYKB6o1Fxj3gUu19l36vyahUS5mMyty7uExCWvR6I6wWoMEuy/wgQD8A3Maae4oavMEvJn2H24B82tN8WLiZd5Pop8RNWt6LKhCFiXKRTQIKZ/8WoXiWFnCyndSzdHyLSRcMxbkvw2dzBsdDGdh4VssmEqTC6CMrq+Jlbydf405rlwOVX/moCLYlPI1jdZJyi0pevRxKkd1Jfy8nk1r/bJ2f6i9QeKeOxJ6ZREZQjltlhZJ9Le7y9MgCafbcytjBSERNommJbIfF7Mvp3wecog+hhz+SkaiFCpq6LLAMnCxy1b/tl7XxTh3NCtfuMVc62d9Ko8VAQc3Aw96K2eZiSqeAUmqVweIfkbjyM9woO1D6oQwBxOvqBB0+Tth2XTrPa2P2sJUye0M/9+HODAgmDSqmO6ToXfBZIz6hx1vXT4roVOK9A5K+TsIZoQS86FrvO40pf1rNq8ITP3LZ4AjJwFaCZ05J0F7cXMom6+xxSGvAB0X4/BC6NB6XCAl2je7ob+osaE7J4umKrgDPCaDSufA2GCQRwIKRYoUVdQS8cIBok8d6PrZF/ZXl4MJTATwbxlQcMkjQwQvvZ3AmakMePNtrRw0NF+f2VjrmTdTilr2SrzVbcrPWgsZwsZamulnSbmTxp6NWZtMHeDavvNJAg+0e81wV6tAvjX5WugMeeL/CW4FUN0GBHdU09J2k60ZO6DiWMrMaq2LxjnPKJ0foJ3BMO1JePG5wHRoymEiksTHYsjxTc1R3BU7IysMiVHG4DEyvmnZBF3kGOPif8bA8XpvdE/B/+zhIcv5e5RBMiwo8RFf7ElVLstgcLu/iGgM/o7iMrg9uYOJsbZaCTGn8Erpjl4Hkagqv+CDoKMBbi4UvsjwYuxZHHUEaqw8L+Jn/XmKsknhT1I3M6n3xcnzxFoKg7YRmEUoXmIKJydn0fvzzuIyeqbDghOyPPbF0oMtl2Zfdpl2fvgRIw0Zs7g22zGpbQtLTU=
+    internal_properties : BQAAAAUAAADgsrJ+YZgVN7yg4ieE5gBrxLDZbWdkkqEvlIUzW7CYPRrZESlI04swUd4jR6WDeBBkUvyjiO/cLe09Zkxk9+itVLqN64UmWoNLfU6Kw0xZ0vTPMmSzwC18+Tco0aucAlI32N3o5w39FwXLKVeJHqrMJKX96MJRyKhH+YRAIHZPsRp3yTEna1kd63dnCARxENybQgx2p4DMZKHtF5UMorHKvM4CYpp+dnYylb6UFjnwSdUvqkC78rO45ifpt4jkNWuhRCmt1Hfi8tn1T/bZ+X6StXe6GDw5KWQUddh1lgiph6Jez9+MIBbfrSyNDOQkJKoGaOZI7C5sLk2gyRoAqqizyak6+HApu0IrQOmCl42bjnkLr5RxjBA9TvOFY60tpApMVORMnKytqE2eJsQa+IVWCexuIQnLD7ONshOFr1qAYAzu/hBhk/RNh0XzLMaWP7sJQ5cUw28+7NAwclCSejPanoW/tXJzejyV/XRYHgVO25DpG2R8UVoge55VftPo4tcF7LpsgbOHDZ7YFFSt4C4MbBWtxQ2Eqqbmvxy+xDg8l3c589sJIRg4/yAmpm72Kl4sRMZmYOIoxFgylaPnu6m6adRwwZ7gOQ+YI89AbkEEjwtD7NdhlmZE7SgbuYTdyfsMxTQIxu7f+o58eVt17vzIuGnGt0271rxF5pGDAQIbbX8D5cC0XzMRckON9e5+t1ICLQ7F+O/L4uPlrMDGCbctyXaVOsAPTaMIiQ9jhL2gzYssQIlFKzchgoZ8HLa70RuzCTLO91BP9GqMJhp/HCstrVtOX6lpy8FsgrPrBaOLnT8NT2hc5HSkOj0Pk+i8UlGvHJkPGJuXwcdTCz1xNVn3b3cbPM+njWb5fJDoi/wNl/md3LM1uYomhpkoq8JzUEJoDk4GLj6B4Cy+JzkT3oHQhl5Igge61rpUXSAQetPLGXNxJJ6/ZmWBewCIWLQn6co2Wky5cze+xLZkQt7jnxmd4Tqp/B0sVEjbWbWBfU1248CNHGphmtEpocT2zLsr42yHi8VG7tLeuIQ+vqkEZ2pn528=
     type : 2
     code_elements :
      type_code : 3
@@ -853,7 +853,7 @@ window :
   -
     name : SAI_Lien_Photo_Voiture
     identifier : 0x21916cbf0c895db5
-    internal_properties : BQAAAAUAAABmO3hXiA2graovMsKkg5PYYnoMLfyPOwZuvCIwaclr3h2QhxM95dHEJFGYC8I9k4p9798mQ3vSiBbYTqJmMWWWS+3G7hxyMa2HrUsfKqQhFPFBPF0Yu2Vrie/BLsNryJzs3zQV8sZCs5loImavv++vXX1O2dgUujA/wFBdbRz591JyqVgERY5r3pmefGYT3pTlTNYKDcYTRGvBvduaAsIUEFO/QT3zwEtN+Zqjpq2eCeoVfge+KRGCYP2AnmXdR3RVfLyBc/bSx2zJbuojO8iQOS880UE1lAFDx1dzy52Y8Hz/Vp1zZrdB9TxLZegrbvPffOaqGxGLex1wV1dmHyhzqpcoTsfeeMQQryeNLZKKwy+zgyRCnZQstPDhoSGZBzF09GRyjR9F+V678Cu/tIU6H+bt4Dwns3a2PGs4d65TqPML7eSgs16xr+RRZTgFzV7ISYU3ZltZYcisnTxIEvt3jpXBkhODMDmuxXU2HM2JJz7//fTRCxHhDOAzj0ARQWQq45P4UDYuFQjoPA7Wj2AM1uLjnvFMZZjuxNwXZ9i7F56sL5q+6OBFX+PWKwwUZjA3lyZJUAs1StTWr5J1HLdHfvg5XoLf7g1aos3R4M/qAarr8+BynMVKTurC/yfP7r38Mta6gP7gsVC1DsslfTVza/83pXLex2YaRaR1HVeHqgr4tSMDvQwMwEkSd6FmPM1PkFY+vfRjuQ2Ne5xcKhQq2XgcYA+Eoj25Y+US2o8LxYjm7RAXbcBHOGmcy4Rbs7NXJEUFIlF4bHySVWBQZvfrC/FP71YIRf+w6KDwqDj7EAIN7ZUYtiGqoTlT/1C7nHq98AqZLszMBGz3KJWuF0gWK9GzsfhJzXRJtJp1KDtlF2AO75vHNH6UeN17IR9M5g5HYlN3a/l9Rflc/7M86CTlf0a3K6IJL55n34TZCqNMSCOTLc4mU7TYCCZ/gtLhHoSs1i/fMRY8g96sxCqwhBfXwtSQ7ldfesFS2LuzvHkGPtS3nCeL/gorq1YtMXOiceY3wdy4vjXpPEOq0V0aFperfENe8ZtjW2voy/9LhA0VprMKncDFukCChDvThA1jJTva
+    internal_properties : BQAAAAUAAABYzHVmEs3LION4yYGEMUai+9glH0ixeFNda7nYHJWTsdvUtQz2r8FSiROVbW8EQSORkojFv2fOx+jOsxqKM7w7gRk9Ch+K1CAuGqZ3Jtp2NfqBWPmC2ls0FpeuUE7uvoYO980ynb/7RSpiJBqAi+J+7PkPZRoRiWGMAmXU+dMI3AeSJPHtM8oGL8zW8+9U2WYgTeYtT4X6jzCONpXbOXyJF/RN3/vdj2VcfY9QwG1TSq8z2wP6lPd9bRJ4zqKuS5x4ysmR/LX85HscI9RnjYrBnEj870NuhmpN/dbVKTd/6vK/EI9uRejvUhATJDz8TQyNEw76W6Ix5X712PODPV6mB2Z2YeSsKqw4B/RED+IsHWAanJ4lAQDOPTgRKNNlK+5v3L7v+HCF5tG1NRySYylwLtTCKvGGAbsGS7pm/XLQTJM6rF77DHSt4Bb9jkkD8CcENCc/wyk327Bj/GnmIV/PxgpukrIxs8y/Xj+yWJ1nBAsNQn61cojPruCeQhtb0/25gkoXkB+H23aIgI/gE+5R21rqMSYmEz92xywUr/+IUyRzMW+3zegXN34qPEBR2YwlHHBEF+4ZUGirreHPmQZJWNXZhQXu8s84ZbMU8FBpp4qyC3EHtfu61N2UHEdYkfvo71qDbR8Q/7rkPASrVpDRe2bplJXJyyjeDDa2uxBKwjAjO37SlB7A7Jo2OtePCzXDpZLXOlUvJa1aqQ+yJXlGUek+1ZidpF9DcpubcGo0+XQRM+VgzvAx8iRaVOrG2E/J81ncxWjcEhZ1Y8FeX1qXG5gnKsVfObV8fR7RFgEW6DIKo8Lxv+WMY1YJzEga2cJ/Kfx0nf82WLIczBicMEMi/0p1qqU2rZBNRyAO7C5KZ9YBFQ52h5gWslKB5v/7t2oZ153UrC5PWcUPHR7yy6VzNalRfqEgy5QpSpSuisqReCHiJG15otg2RlGRw8aMz9i8k73ofvNyecIJCj9Cgd47vpEWiyA8ND+SXcVEavybMOKywJRMqyKN92f5LgvBGhY74KKLHZQbLFcj1V6YAWRE8Knz6CUcl9w07OoQWMVhGCHjNdhRTP3Zn8sihn7pTdI=
     type : 2
     code_elements :
      type_code : 3
@@ -1072,19 +1072,19 @@ window :
       	cas "VOITURE"
       		gclUneVoiture.Charge(gnIdVehicule)
       		SourceVersEcran()
-      		IMG_Vehicule = dChargeImage(gclUneVoiture.p_Photo)
+      		IMG_Photo_Voiture = dChargeImage(gclUneVoiture.p_Photo)
       	cas "MOTO"
       		gclUneMoto.Charge(gnIdVehicule)
       		SourceVersEcran()
-      		IMG_Vehicule = dChargeImage(gclUneMoto.p_Photo)
+      		IMG_Photo_Moto = dChargeImage(gclUneMoto.p_Photo)
       	cas "CAMION"
       		gclUnCamion.Charge(gnIdVehicule)
       		SourceVersEcran()
-      		IMG_Vehicule = dChargeImage(gclUnCamion.p_Photo)
+      		IMG_Photo_Camion = dChargeImage(gclUnCamion.p_Photo)
       	cas "UTILITAIRE"
       		gclUnUtilitaire.Charge(gnIdVehicule)
       		SourceVersEcran()
-      		IMG_Vehicule = dChargeImage(gclUnUtilitaire.p_Photo)
+      		IMG_Photo_Utilitaire = dChargeImage(gclUnUtilitaire.p_Photo)
       	AUTRE CAS
       		
       FIN
